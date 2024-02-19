@@ -23,15 +23,8 @@ openai.api_key = config("OPEN_AI_KEY")
 # Initiate App
 app = FastAPI()
 
-
 # CORS - Origins
-origins = [
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "http://localhost:4173",
-    "http://localhost:3000",
-]
-
+origins = ["*"]
 
 # CORS - Middleware
 app.add_middleware(
